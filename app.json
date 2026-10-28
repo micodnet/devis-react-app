@@ -1,24 +1,52 @@
 {
   "expo": {
-    "name": "mvp_devis_app_mobile",
-    "slug": "mvp_devis_app_mobile",
+    "name": "Devis Express Pro",
+    "slug": "devis-express-pro",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
+    "scheme": "devispro",
+    "assetBundlePatterns": ["**/*"],
+    "icon": "./assets/images/icon.png",
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0a0f1a"
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.micodnet.devisexpresspro"
     },
     "android": {
+      "package": "com.micodnet.devisexpresspro",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundColor": "#0a0f1a"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sharing",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#0a0f1a",
+          "image": "./assets/images/og-image.png",
+          "imageWidth": 200
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "apiBaseUrl": "https://mvp-devis.onrender.com",
+      "router": {},
+      "eas": {
+        "projectId": "938a5003-d133-446b-a857-c186bda11b3f"
       }
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "owner": "micodnet"
   }
 }
